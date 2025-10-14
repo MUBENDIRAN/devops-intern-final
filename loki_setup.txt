@@ -1,0 +1,32 @@
+# Loki Setup Instructions
+   
+   ## How to Start Loki
+   
+   1. Run Loki using Docker:
+      docker run -d --name=loki -p 3100:3100 grafana/loki:latest
+   
+   2. Run Promtail (log collector):
+      docker run -d --name=promtail \
+        -v /var/log:/var/log \
+        --link loki \
+        grafana/promtail:latest \
+        -config.file=/etc/promtail/config.yml
+   
+   ## How to View Logs
+   
+   1. Query Loki API:
+      curl -G -s "http://localhost:3100/loki/api/v1/query" \
+        --data-urlencode 'query={job="varlogs"}'
+   
+   2. Or use Grafana:
+      - Run Grafana: docker run -d -p 3000:3000 grafana/grafana
+      - Open http://localhost:3000
+      - Add Loki as data source: http://loki:3100
+      - Create dashboard to view logs
+   
+   ## Log Collection from Docker Container
+   
+   To forward logs from hello-devops container:
+      docker run --log-driver=loki \
+        --log-opt loki-url="http://localhost:3100/loki/api/v1/push" \
+        hello-devops

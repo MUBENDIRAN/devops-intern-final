@@ -34,6 +34,10 @@ Job type: service
 Driver: Docker
 Resources: 100 MHz CPU, 128 MB memory
 
+proof of attachment:
+![alt text](image-3.png)
+
+
 GRAFANA LOKI:
 
 Setup includes:
@@ -42,3 +46,5 @@ Running Loki in Docker
 Configuring log forwarding from containers
 Querying logs via API or Grafana
 
+proof of attachment:
+![alt text](image-2.png)

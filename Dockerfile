@@ -5,3 +5,4 @@ WORKDIR /app
 COPY hello.py .
 
 CMD ["python", "hello.py"]
+CMD ["tail", "-f", "/dev/null"]
