@@ -4,7 +4,7 @@ Name: Mubendiran K,
 
 Date: 14.10.2025
 
-This mini project demonstrates the working of complete DevOps workflow using git,docker,ci/cd,nodeman and monitoring tools like grafana loki 
+This mini project demonstrates the working of complete DevOps workflow using git,docker,ci/cd,nomad and monitoring tools like grafana loki 
 
 SCRIPT:
 created a bash script for sysinfo and executed perfectly 
@@ -23,4 +23,22 @@ proof of attachment:
 
  Status badge : [![CI Pipeline](https://github.com/MUBENDIRAN/devops-intern-final/actions/workflows/docker-image.yml/badge.svg)](https://github.com/MUBENDIRAN/devops-intern-final/actions/workflows/docker-image.yml)
 
- 
+ NOMAD:
+
+Created a Nomad job specification for deploying the containerized application.
+Location: nomad/hello.nomad
+
+Configuration:
+
+Job type: service
+Driver: Docker
+Resources: 100 MHz CPU, 128 MB memory
+
+GRAFANA LOKI:
+
+Setup includes:
+
+Running Loki in Docker
+Configuring log forwarding from containers
+Querying logs via API or Grafana
+
