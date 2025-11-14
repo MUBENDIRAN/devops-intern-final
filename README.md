@@ -14,7 +14,7 @@ Proof:![alt text](image.png)
 🐳 Docker
 
 A Dockerfile was created to containerize hello.py.
-The image was built locally and pushed to GitHub Container Registry.
+The image was built locally and pushed to GitHub.
 
 Proof:![alt text](image-1.png)
 
@@ -51,6 +51,6 @@ Running Loki in Docker
 
 Forwarding container logs
 
-Querying logs via API or Grafana dashboard
+Querying logs via Grafana dashboard
 
 Proof:![alt text](image-2.png)
