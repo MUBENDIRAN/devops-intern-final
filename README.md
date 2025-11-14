@@ -1,50 +1,56 @@
-# DevOps inter final assesment 
+DevOps Tools Hands-On
 
-Name: Mubendiran K,
+Author: Mubendiran K
 
-Date: 14.10.2025
+This mini-project demonstrates a complete DevOps workflow using Git, Docker, CI/CD, Nomad, and monitoring with Grafana + Loki. The goal is simple: try out the full DevOps pipeline end-to-end.
 
-This mini project demonstrates the working of complete DevOps workflow using git,docker,ci/cd,nomad and monitoring tools like grafana loki 
+📝 Script
 
-SCRIPT:
-created a bash script for sysinfo and executed perfectly 
-proof of attachment:
- ![alt text](image.png)
+A bash script was created to fetch system information and executed successfully.
 
-DOCKER:
-created a dockerfile to container hello.py 
-build the image and pushed to github 
-proof of attachment:
- ![alt text](image-1.png)
+Proof:![alt text](image.png)
 
- CI/CD :
 
- added a ci test workflow using github actions 
+🐳 Docker
 
- Status badge : [![CI Pipeline](https://github.com/MUBENDIRAN/devops-intern-final/actions/workflows/docker-image.yml/badge.svg)](https://github.com/MUBENDIRAN/devops-intern-final/actions/workflows/docker-image.yml)
+A Dockerfile was created to containerize hello.py.
+The image was built locally and pushed to GitHub Container Registry.
 
- NOMAD:
+Proof:![alt text](image-1.png)
 
-Created a Nomad job specification for deploying the containerized application.
+
+⚙️ CI/CD – GitHub Actions
+
+A CI test workflow was added using GitHub Actions to validate the Docker image.
+
+Status Badge:[![CI Pipeline](https://github.com/MUBENDIRAN/devops-intern-final/actions/workflows/docker-image.yml/badge.svg)](https://github.com/MUBENDIRAN/devops-intern-final/actions/workflows/docker-image.yml)
+
+
+🚀 Nomad Deployment
+
+A Nomad job specification is included for deploying the containerized application.
+
 Location: nomad/hello.nomad
 
 Configuration:
 
-Job type: service
+Job Type: service
+
 Driver: Docker
+
 Resources: 100 MHz CPU, 128 MB memory
 
-proof of attachment:
-![alt text](image-3.png)
+Proof:![alt text](image-3.png)
 
 
-GRAFANA LOKI:
+📊 Grafana + Loki (Monitoring)
 
-Setup includes:
+Monitoring setup includes:
 
 Running Loki in Docker
-Configuring log forwarding from containers
-Querying logs via API or Grafana
 
-proof of attachment:
-![alt text](image-2.png)
+Forwarding container logs
+
+Querying logs via API or Grafana dashboard
+
+Proof:![alt text](image-2.png)
